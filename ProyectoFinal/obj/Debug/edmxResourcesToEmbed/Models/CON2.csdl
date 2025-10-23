@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BibliotecaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="libros">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="10" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="genero" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="cantidad" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="autor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fechaPublicacion" Type="DateTime" Precision="3" />
+    <Property Name="imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="10" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="usuarios" Relationship="Self.FK_usuarios_roles" FromRole="roles" ToRole="usuarios" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="10" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="correo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="contrasenia" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ID_rol" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="fechaRegistro" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="roles" Relationship="Self.FK_usuarios_roles" FromRole="usuarios" ToRole="roles" />
+  </EntityType>
+  <Association Name="FK_usuarios_roles">
+    <End Role="roles" Type="Self.roles" Multiplicity="0..1" />
+    <End Role="usuarios" Type="Self.usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="usuarios">
+        <PropertyRef Name="ID_rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BibliotecaEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="libros" EntityType="Self.libros" />
+    <EntitySet Name="roles" EntityType="Self.roles" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+    <AssociationSet Name="FK_usuarios_roles" Association="Self.FK_usuarios_roles">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="usuarios" EntitySet="usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

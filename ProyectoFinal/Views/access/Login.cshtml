@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Iniciar Sesión</h2>
+
+@using (Html.BeginForm("Login", "Access", FormMethod.Post))
+{
+    @Html.AntiForgeryToken() // Siempre usa esto para seguridad
+
+    <div class="form-horizontal">
+        <hr />
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Correo:</label>
+            <div class="col-md-10">
+                <input type="text" name="Correo" class="form-control" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Contraseña:</label>
+            <div class="col-md-10">
+                <input type="password" name="Contrasenia" class="form-control" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Acceder" class="btn btn-default" />
+            </div>
+        </div>
+
+        @if (ViewBag.Error != null)
+        {
+            <p style="color:red;">@ViewBag.Error</p>
+        }
+    </div>
+}
