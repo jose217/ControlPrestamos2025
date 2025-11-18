@@ -7,23 +7,23 @@
       "RelativeMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\jramos\\documents\\utec\\03-2025\\progra2\\proyectofinal\\proyectofinal\\controllers\\accesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|C:\\Users\\jramos\\Documents\\UTEC\\03-2025\\PROGRA2\\ProyectoFinal\\proyectofinal\\controllers\\accesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\controllers\\accesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\jramos\\documents\\utec\\03-2025\\progra2\\proyectofinal\\proyectofinal\\views\\access\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|C:\\Users\\jramos\\Documents\\UTEC\\03-2025\\PROGRA2\\ProyectoFinal\\proyectofinal\\views\\access\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\views\\access\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\jramos\\documents\\utec\\03-2025\\progra2\\proyectofinal\\proyectofinal\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|C:\\Users\\jramos\\Documents\\UTEC\\03-2025\\PROGRA2\\ProyectoFinal\\proyectofinal\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\jramos\\documents\\utec\\03-2025\\progra2\\proyectofinal\\proyectofinal\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|C:\\Users\\jramos\\Documents\\UTEC\\03-2025\\PROGRA2\\ProyectoFinal\\proyectofinal\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\jramos\\documents\\utec\\03-2025\\progra2\\proyectofinal\\proyectofinal\\models\\con2.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|C:\\Users\\jramos\\Documents\\UTEC\\03-2025\\PROGRA2\\ProyectoFinal\\proyectofinal\\models\\con2.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{2F9ED72E-014A-41E8-9265-77CAD8F90003}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\models\\con2.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
@@ -59,8 +59,7 @@
               "RelativeToolTip": "ProyectoFinal\\Views\\access\\Login.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T23:54:46.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T23:54:46.131Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "ProyectoFinal\\Controllers\\accessController.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T23:53:13.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T23:53:13.03Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "ProyectoFinal\\Controllers\\rolesController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwAwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T23:46:35.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T23:46:35.788Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "ProyectoFinal\\Controllers\\usuariosController.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAowDcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T23:41:36.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T23:41:36.917Z"
             },
             {
               "$type": "Document",
@@ -110,8 +106,7 @@
               "ToolTip": "C:\\Users\\jramos\\Documents\\UTEC\\03-2025\\PROGRA2\\ProyectoFinal\\ProyectoFinal\\Models\\CON2.edmx [Diagram1]",
               "RelativeToolTip": "ProyectoFinal\\Models\\CON2.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-10-22T23:34:52.571Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2025-10-22T23:34:52.571Z"
             }
           ]
         }
