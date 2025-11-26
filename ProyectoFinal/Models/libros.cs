@@ -11,15 +11,26 @@ namespace ProyectoFinal.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class libros
     {
         public decimal ID { get; set; }
+
+        [Required(ErrorMessage = "El titulo es requerido")]
         public string titulo { get; set; }
         public string genero { get; set; }
         public string estado { get; set; }
+
+        [Required(ErrorMessage = "La cantidad es requerida")]
+        [DisplayFormat(DataFormatString = "{0:N0}", ApplyFormatInEditMode = true)]
         public Nullable<decimal> cantidad { get; set; }
+
+        [Required(ErrorMessage = "El autor es requerido")]
         public string autor { get; set; }
+
+        [DataType(DataType.Date)] 
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> fechaPublicacion { get; set; }
         public string imagen { get; set; }
     }

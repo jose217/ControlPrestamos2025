@@ -1,0 +1,84 @@
+﻿@model ProyectoFinal.Models.libros
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var defaultImage = Url.Content("~/Content/images/default-book.jpg");
+}
+
+<h2>Detalles del Libro</h2>
+
+<div>
+    <h4>Información Completa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.imagen)
+        </dt>
+        <dd>
+            @if (!string.IsNullOrEmpty(Model.imagen))
+            {
+                <img src="@Url.Content("~/Content/images/" + Model.imagen)"
+                     alt="@Model.titulo"
+                     style="width: 200px; height: 280px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+                     onerror="this.src='@defaultImage'" />
+            }
+            else
+            {
+                <img src="@defaultImage"
+                     alt="Sin imagen"
+                     style="width: 200px; height: 280px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaPublicacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fechaPublicacion)
+        </dd>
+    </dl>
+</div>
+
+<div class="form-actions">
+    <a href="@Url.Action("Edit", new { id = Model.ID })" class="btn btn-warning">
+        <i class="fa fa-pencil"></i> Editar
+    </a>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">
+        <i class="fa fa-arrow-left"></i> Volver al Listado
+    </a>
+</div>

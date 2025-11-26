@@ -4,42 +4,95 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
-    @Styles.Render("~/Content/Login.css")
-    @Styles.Render("~/Content/css/")
+    <title>@ViewBag.Title - Biblioteca </title>
+    @Styles.Render("~/Content/LoginMain.css")
+    @Styles.Render("~/Content/MyStyle.css")
+    @Styles.Render("~/Content/LoginUtils.css")
+    @Styles.Render("~/Content/bootstrap.min.css")
     @Styles.Render("~/Content/icons/css/all.min.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     @if (Request.IsAuthenticated)
     {
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-            <div class="container">
-                @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li>@Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Acerca de", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Contacto", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+        <div class="d-flex">
+            <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 280px; min-height: 100vh;">
+                <div class="p-3 border-bottom">
+                    <a href="@Url.Action("Index", "Home")" class="d-flex align-items-center text-decoration-none">
+                        <span class="fs-5 fw-semibold text-dark">
+                            <span class="bg-dark text-white rounded px-2 py-1 me-2">CB</span>
+                            
+                        </span>
+                    </a>
+                </div>
+                <ul class="nav nav-pills flex-column mb-auto p-3">
+                    <li class="nav-item mb-1">
+                        <a href="@Url.Action("Index", "Home")" class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Index" && ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "text-dark")">
+                            <i class="fas fa-home me-2"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="@Url.Action("Dashboard", "Home")" class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Dashboard" ? "active" : "text-dark")">
+                            <i class="fas fa-chart-line me-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="@Url.Action("Prestamos", "Home")" class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Orders" ? "active" : "text-dark")">
+                            <i class="fas fa-shopping-cart me-2"></i>
+                            Orders
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="@Url.Action("Index", "Libros")" class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Products" ? "active" : "text-dark")">
+                            <i class="fa-solid fa-book me-2"></i>
+                            Libros
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="@Url.Action("Customers", "Home")" class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Customers" ? "active" : "text-dark")">
+                            <i class="fas fa-users me-2"></i>
+                            Customers
+                        </a>
+                    </li>
+                </ul>
+                <div class="border-top p-3 mt-auto">
+                    <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                        <strong class="text-dark">@User.Identity.Name</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-light text-small shadow" aria-labelledby="dropdownUser">
+                        <li><a class="dropdown-item" href="@Url.Action("Profile", "Account")"><i class="fas fa-user me-2"></i>Profile</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Settings", "Account")"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Logout", "Access")"><i class="fas fa-sign-out-alt me-2"></i>Sign out</a></li>
                     </ul>
                 </div>
             </div>
-        </nav>
+
+            <div class="flex-grow-1">
+                <div class="container-fluid p-4">
+                    @RenderBody()
+                </div>
+
+                <hr />
+                <footer class="p-3">
+                    <p>&copy; @DateTime.Now.Year - Grupo 4</p>
+                </footer>
+            </div>
+        </div>
     }
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
-    </div>
+    else
+    {
+
+        <div>
+            @RenderBody()
+        </div>
+    }
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/LoginMain")
     @RenderSection("scripts", required: false)
 </body>
 </html>

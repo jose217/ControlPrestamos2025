@@ -1,0 +1,87 @@
+﻿@model ProyectoFinal.Models.libros
+@{
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+<h3>¿Está seguro que desea eliminar este libro?</h3>
+
+<div>
+    <h4>Detalles del Libro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.imagen)
+        </dt>
+        <dd>
+            @if (!string.IsNullOrEmpty(Model.imagen))
+            {
+                <img src="@Url.Content("~/Content/images/" + Model.imagen)"
+                     alt="@Model.titulo"
+                     style="width: 150px; height: 200px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd;"
+                     onerror="this.src='@Url.Content("~/Content/images/default-book.jpg")'.replace(/&quot;/g, '')" />
+            }
+            else
+            {
+                <img src="@Url.Content("~/Content/images/default-book.jpg")"
+                     alt="Sin imagen"
+                     style="width: 150px; height: 200px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd;" />
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaPublicacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fechaPublicacion)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <button type="submit" class="btn btn-danger">
+                <i class="fa fa-trash"></i> Eliminar
+            </button>
+            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-secondary" })
+        </div>
+    }
+</div>
